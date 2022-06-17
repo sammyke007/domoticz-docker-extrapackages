@@ -35,6 +35,10 @@ RUN set -ex \
         libpython3.7-dev \
         python3 \
         python3-pip \
+        # extra packages voor Sammy
+        jq \
+        oathtool \
+        wget \
     && OS="$(uname -s | sed 'y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/')" \
     && MACH=$(uname -m) \
     && if [ ${MACH} = "armv6l" ]; then MACH = "armv7l"; fi \
